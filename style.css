@@ -1,0 +1,46 @@
+div{
+    height: 262px;
+    width: 350px;
+    border: 2px solid black;
+
+}
+
+.side-1{
+    background-color: aquamarine;
+    z-index: 10;
+    backface-visibility: hidden;
+}
+
+.side-2{
+    background-color: blue;
+    transform: rotateY(180deg);
+}
+
+body{
+    perspective: 500px;
+}
+
+.wrapper{
+    position: relative;
+    height: 250px;
+    width: 350px;
+    transition: 2s;
+    transform-style: preserve-3d;
+    margin: 30px auto;
+}
+
+.side-1 , .side-2{
+    position: absolute;
+}
+
+.wrapper:hover{
+    transform: rotateY(180deg);
+}
+
+.wrapper:hover .side-2{
+    /* z-index: 11; */
+}
+
+img{
+    width: 350px;
+}
